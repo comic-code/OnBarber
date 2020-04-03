@@ -6,7 +6,7 @@ include('controller/conexao.php');
 $nome = explode("@", $_SESSION['email']);
 $nome = $nome[0];
 
-$sql = "SELECT * FROM tb_horarios_$nome;";
+$sql = "SELECT data_, hora FROM tb_horarios_$nome;";
 
 $result = mysqli_query($conexao, $sql);
 while($exibe = mysqli_fetch_assoc($result)){
@@ -21,16 +21,15 @@ while($exibe2 = mysqli_fetch_assoc($result2)){
 	$id = $exibe2['id_funcionario'];
 }
 
-$sql3 = "SELECT * FROM tb_servicos WHERE id_funcionario = '$id'";
+$sql3 = "SELECT servico, valor FROM tb_servicos WHERE id_funcionario = '$id'";
 $result3 = mysqli_query($conexao, $sql3);
 while($exibe3 = mysqli_fetch_assoc($result3)) {
 	$array2[] = $exibe3;
 }
 
-//Array 1 horários
-print_r($array1);
-//Array 2 serviços
-print_r($array2);
+print_r($array3 = array_map(NULL,$array1 , $array2));
+
+
 
 ?>
 
@@ -57,28 +56,6 @@ print_r($array2);
 			</ul>
 		</nav>
     </header> <!-- fim Barra de navegação -->
-    
-    <?php
-	if(isset($_SESSION['sucesso'])):
-	?>
-	<div class="msg sucesso">
-		<p>Serviço agendado com sucesso,compareça a barbearia na data ehora selecionada.</p>
-	</div>		
-	<?php
-    endif;
-	unset($_SESSION['sucesso']);
-	?>
-
-    <?php
-	if(isset($_SESSION['dados_vazios'])):
-	?>
-	<div class="msg erro">
-	  <p>É necessário o preenchimento de todos os campos.</p>
-	</div>
-	<?php
-	endif;
-	unset($_SESSION['dados_vazios']);
-	?>
 
     <section id="caixa-agendamento"> <!-- início sessão agendamento -->
         
@@ -87,7 +64,29 @@ print_r($array2);
             <p>
                 Estes são os ultimos agendamentos:
             </p>
-        </div>    
+		</div>  
+		
+		<table border="1">
+			<tr>
+        		<th>Serviço</th>
+        		<th>Valor</th>
+				<th>Data</th>
+       			<th>Hora</th>
+			</tr>
+			<?php 
+				foreach($array3 as $idx => $valor) {
+
+			?>
+			<tr>
+			<?php 
+				foreach($valor as $idx2 => $servico) {
+			?>	
+				<td><?php echo $array3[$idx][$idx2] ?></td>
+			
+			<?php } ?>
+			<tr>
+			<?php }?>
+		</table>
             
         
     </section>
