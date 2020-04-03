@@ -76,7 +76,7 @@
 	<footer> <!-- início rodapé -->
 
 		<div style="padding-bottom:5px;">
-			<span class="cinza">Contato | Sobre | Quem somos</span>
+			
 		</div>
 
 		&copy; Desenvolvido por <span class="borda">EasySolutions</span>
