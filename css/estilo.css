@@ -1,0 +1,517 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #eaeaea;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+/* Pagina principal */
+/* cabeçalho */
+header{
+	background: #292b2c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	box-shadow: 0 0 2px 2px #000;
+}
+
+
+
+#logo a{
+	margin-left: 20px;
+	color: #f7f7f7;
+}
+
+.borda{
+	border-bottom: 1px solid #5cb85c;
+}
+
+/* Menu de navegação */
+#navegacao ul li{
+	float: left;
+	margin-right: 20px;
+}
+
+#navegacao ul li a{
+	display: block;
+	width: 90px;
+	height: 25px;
+	padding: 5px;
+	font-size: 0.9em;
+	line-height: 1em;
+	text-align: center;
+	color: #cecece;
+}
+
+#navegacao ul li a:hover{
+	background: #5cb85c;
+	color: #f7f7f7;
+	transition: all 0.6s;
+	box-shadow: 0 0 10px 0 #5cb85c;
+}
+
+#navegacao ul li a:active{
+	background: linear-gradient(to bottom, #5cb85c, #458b45);
+	color: #f7f7f7;
+}
+
+#navegacao ul li a.selecionado{
+	background: linear-gradient(to bottom, #5cb85c, #458b45);
+	box-shadow: 0 0 10px 0 #5cb85c;
+	color: #f7f7f7;
+}
+
+.divisor{
+	background: url(../img/divisor.png) no-repeat right center;
+}
+/* Fim Menu */
+
+/* Corpo do site */
+
+#container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto 0 auto;
+}
+
+#container .card{
+	width: 360px;
+	height: 400px;
+	margin: 15px;
+	box-shadow: 5px 5px 5px 2px #cecece;
+	text-align: center;
+	background: #f7f7f7;		
+}
+
+#container .card:hover{
+	transform: scale(0.9);
+	transition: all 0.6s;
+}
+
+#container h3{
+	color: #292b2c;
+}
+
+#container .card p{
+	font-size: 0.9em;
+	margin-top: 15px;
+	text-align: justify;
+	padding: 20px;
+}
+
+.icon-circle{
+	position: relative;
+	bottom: 35px;
+	left: 150px;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	box-shadow: 0 0 5px 0px #292b2c;
+	background-color: #f7f7f7;
+}
+
+/* Tela de agendamento */
+#caixa-agendamento{
+	width: 480px;
+	margin: 50px auto 0 auto;
+	background: #f7f7f7;
+	box-shadow: 5px 5px 5px 2px #cecece;
+	color: #292b2c;
+}
+
+#form-agendamento label{
+	display: block;
+	padding: 5px;
+	margin: 20px 10px;
+	color: #292b2c;
+	border-bottom: 1px solid #eaeaea;
+}
+
+#form-agendamento input{
+	color: #292b2c;
+	margin: 0 5px 0 15px;
+	padding: 0 0 0 5px;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+#form-agendamento input:hover{
+	border: 1px solid #cecece;
+	transition: all 0.5s;
+}
+
+#form-agendamento select{
+	margin: 0 15px;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	padding: 2px;
+	color: #292b2c;
+	font-size: 0.9em;
+}
+
+#form-agendamento select:hover{
+	border: 1px solid #cecece;
+	transition: all 0.5s;
+}
+
+.box{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.box h2{
+	font-size: 1.8em;
+	letter-spacing: -0.04em;
+}
+
+.box p{
+	padding: 10px 0 20px 0;
+}
+
+#form-agendamento input.btn-agendar{
+	padding: 0;
+	width: 80px;
+	height: 30px;
+	margin: 20px 0 10px 15px;
+	background: linear-gradient(to bottom, #5cb85c, #52a552);
+	color: #f7f7f7;
+	font-size: 0.8em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#form-agendamento input.btn-agendar:hover{
+	background: linear-gradient(to bottom, #52a552, #4b964b);
+	transition: none;
+	box-shadow: none;
+}
+
+/* fim tela agendamento */
+
+/* Rodapé */
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 0.7em;
+	color: #f7f7f7;
+	background-color: #292b2c;
+	padding: 12px;
+}
+
+.cinza{
+	color: #cecece;
+}
+
+/* Fim rodapé */
+
+/* Cadastro usuário */
+
+#caixa{
+	width: 390px;
+	margin: 60px auto 0 auto;
+	box-shadow: 5px 5px 5px 2px #cecece;
+	background: #f7f7f7;
+}
+
+.titulo{
+	width: 90%;
+	margin: 10px auto 20px auto;
+	text-align: center;
+	color: #292b2c;
+	font-size: 1.4em;
+	border-bottom: 1px solid #cecece;
+}
+
+#form-user label{
+	display: block;
+	padding: 5px;
+	margin: 10px 5px;
+	color: #292b2c;
+	font-size: 0.9em;
+}
+
+.btn-voltar{
+	float: right;
+	position: relative;
+	text-align: center;
+	bottom: 50px;
+	right: 10px;
+	width: 80px;
+	height: 30px;
+	font-size: 0.8em;
+	line-height: 30px;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid #292b2c;
+	border-radius: 5px;
+	color: #292b2c;
+}
+
+.btn-voltar:hover{
+	background: #292b2c;
+	color: #f7f7f7;
+}
+
+#form-user fieldset{
+	border: none;
+}
+
+#form-user input{
+	width: 100%;
+	height: 35px;
+	padding-left: 10px;
+	font-size: 0.7em;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus{
+	box-shadow: 0 0 2px 1px #cecece !important;
+	border-radius: 5px;
+	outline: 0;
+}
+
+#form-user input:hover{
+	border: 1px solid #cecece;
+	transition: all 0.5s;
+}
+
+#form-user input.btn-enviar{
+	padding: 0;
+	width: 80px;
+	height: 30px;
+	margin: 20px 0 10px 0;
+	background: linear-gradient(to bottom, #5cb85c, #52a552);
+	color: #f7f7f7;
+	font-size: 0.8em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#form-user input.btn-enviar:hover{
+	background: linear-gradient(to bottom, #52a552, #4b964b);
+	transition: none;
+	box-shadow: none;
+}
+
+/* fim cadastro usuario */
+
+/* Tela de login */
+
+#caixa-login{
+	width: 390px;
+	height: 280px;
+	margin: 60px auto 0 auto;
+	box-shadow: 5px 5px 5px 2px #cecece;
+	background: #f7f7f7;
+	text-align: center;
+}
+
+#form-login .titulo{
+	background: linear-gradient(to bottom, #292b2c, rgb(85, 85, 85));
+	color: #f7f7f7;
+	width: 100%;
+	padding: 15px;
+}
+
+#form-login input{
+	width: 90%;
+	padding-left: 28px;
+	margin-top: 10px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #eaeaea;
+	font-size: 0.7em;
+	background-color: #fff;
+}
+
+#form-login input:hover{
+	border: 1px solid #cecece;
+	transition: all 0.5s;
+}
+
+#form-login input.btn-login{
+	padding: 0;
+	background: linear-gradient(to bottom, #5cb85c, #52a552);
+	color: #f7f7f7;
+	margin-top: 15px;
+	font-size: 1em;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid gray;
+}
+
+#form-login input.btn-login:hover{
+	background: linear-gradient(to bottom, #52a552, #4b964b);	
+	box-shadow: none;
+	transition: none;
+}
+
+#form-login input.btn-login:active{
+	background: #292b2c;
+}
+
+.icon-user{
+	background: url(../img/carta.png) no-repeat left center;
+	background-position: 5px;
+}
+
+.icon-senha{
+	background: url(../img/cadeado.png) no-repeat left center;
+	background-position: 5px;
+}
+
+/* models */
+
+body div.msg {
+	display: flex;
+	width: 390px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 20px;
+	margin: 10px auto 0 auto;
+	color: #fff;
+}
+
+body div.erro {
+	background-color: #d9534f!important;
+}
+
+body div.sucesso {
+	background-color: #5cb85c;
+}
+
+body div.repetido {
+	background-color: rgb(45, 45, 161);
+}
+
+/* Fim tela de login user */
+
+/* responsive */
+
+@media (max-width: 576px){
+	/* Page inicial */
+	#container{
+		margin-top: 30px;
+		flex-direction: column;
+		padding-bottom: 300px;
+	}
+
+	#container .card{
+		width: 310px;
+		height: 340px;
+		margin: 10px;	
+	}
+
+	#container .card p{
+		font-size: 0.8em;
+		margin-top: 5px;
+		padding: 10px;
+	}
+
+	#container .card img{
+		width: 100%;
+	}
+
+	.icon-circle{
+		left: -10000px;
+	}
+
+	#container h3{
+		margin-top: -20px;
+	}
+	
+	/* Fim page inicial */ 
+
+	/* page login */
+
+	#caixa-agendamento{
+		width: 320px;
+	}
+
+	#caixa-login{
+		margin-top: 40px;
+		width: 310px;
+	}
+	/* Fim page login */
+
+	/* page cadastro user */
+	#caixa{
+		width: 310px;
+		margin-top: 40px;
+	}
+	/* fim cadastro user */
+
+	/* nav bar */
+
+	#navegacao ul li a{
+		font-size: 0.8em;
+		line-height: 1.2em;
+	}
+
+	#navegacao ul li{
+		margin-right: 10px;
+	}
+
+	header{
+		padding: 10px;
+	}
+
+	#logo a{
+		margin-left: 10px;
+	}
+
+	.divisor{
+		background: none;
+	}
+	/* fim nav bar */
+
+	/* footer */
+	footer{
+		position: relative;
+	}
+}
+
+@media (min-width: 577px) and (max-width: 1024px){
+
+	#container .card{
+		width: 290px;
+		height: 360px;
+	}
+
+	#container .card img{
+		width: 100%;
+	}
+
+	.icon-circle{
+		left: -10000px;
+	}
+
+	header{
+		width: 100%;
+	}
+
+	footer{
+		position: relative;
+		margin-top: 10px;
+	}
+
+}
